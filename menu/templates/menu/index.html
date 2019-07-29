@@ -9,7 +9,16 @@
 <body>
   <header>
     <h2>The Nazi Restaurant</h2>
-    <p>try us <a class="btn btn-info" href="{%url 'login'%}">Login</a> </p>
+    {% if user.is_authenticated %}
+      <p>Logged as {{ user.username }}</p>
+      <p>{{user.last_name}}</p>
+      <p>{{user.first_name}}</p>
+      <img src="" alt="">
+     {% else %}
+       <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+         Login
+       </a>
+     {% endif %}
   </header>
 </body>
 </html>

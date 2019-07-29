@@ -23,8 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-AUTH_USER_MODEL = 'accounts.User'
+# AUTH_USER_MODEL = 'accounts.User'
 
+#account settings
+
+LOGIN_URL = '/auth/login/google-oauth2/'
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
+SOCIAL_AUTH_URL_NAMESPACE="social"
 
 # Application definition
 INSTALLED_APPS = [
@@ -38,7 +44,23 @@ INSTALLED_APPS = [
     'menu',
     "bootstrap4",
     "accounts",
+    #social auth app
+    'social_django',
 ]
+
+#Google backends
+AUTHENTICATION_BACKENDS=(
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+'''
+Congiguration of API keys
+'''
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="970982231572-2qi72rn9vasf6vd1gbt674vmjh8aj2ev.apps.googleusercontent.com";
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET="xaCErfr8XQR5w7_KE0dyGSTy"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
