@@ -1,4 +1,5 @@
 # Django #
+.vscode
 *.log
 *.pot
 *.pyc
@@ -116,3 +117,4 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 migrations/
+static-cdn/
