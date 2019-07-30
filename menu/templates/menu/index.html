@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Superb Restaurant</title>
+    <title>{{title}}</title>
 </head>
 <body>
-    <h1>hello world</h1>
-    
+  <header>
+    <h2>The Nazi Restaurant</h2>
+    {% if user.is_authenticated %}
+      <p>Logged as {{ user.username }}</p>
+      <p>{{user.last_name}}</p>
+      <p>{{user.first_name}}</p>
+      <img src="" alt="">
+     {% else %}
+       <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+         Login
+       </a>
+     {% endif %}
+  </header>
 </body>
 </html>

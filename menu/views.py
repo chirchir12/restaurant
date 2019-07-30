@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def indexView(request):
-    return render(request, 'menu/index.html', {})
+    title="Nazi"
+    return render(request, 'menu/index.html', {"title":title})
