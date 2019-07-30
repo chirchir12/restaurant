@@ -58,7 +58,7 @@ AUTHENTICATION_BACKENDS=(
 Congiguration of API keys
 '''
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="970982231572-2qi72rn9vasf6vd1gbt674vmjh8aj2ev.apps.googleusercontent.com";
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="970982231572-2qi72rn9vasf6vd1gbt674vmjh8aj2ev.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET="xaCErfr8XQR5w7_KE0dyGSTy"
 
 
