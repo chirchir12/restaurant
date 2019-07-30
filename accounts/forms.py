@@ -22,12 +22,12 @@ class RegisterForm(forms.ModelForm):
 
     def clean_password2(self):
         # Check that the two password entries match
-        password1 = self.cleaned_data.get("password1")
+        password1 = self.cleaned_data.get("password")
         password2 = self.cleaned_data.get("password2")
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Passwords don't match")
         return password2
-
+        
 
 class UserAdminCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required

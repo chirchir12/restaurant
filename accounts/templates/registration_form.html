@@ -1,4 +1,5 @@
 {%extends "base.html"%}
+{%load bootstrap4%}
 {%block content%}
 <div class="container">
 
@@ -7,10 +8,12 @@
     <div class="col-md-6">
       <section>
         <header>
-          <h3>Login</h3>
+          <h3>Registration Page</h3>
         </header>
-        <form class="" action="index.html" method="post">
-          <button class="btn btn-dark btn-sm" type="button" name="button">Login</button>
+        <form class="" action="/accounts/register/" method="post">
+          {%csrf_token%}
+          {%bootstrap_form form%}
+          <button class="btn btn-dark btn-sm" type="submit" name="button">Register</button>
         </form>
       </section>
     </div>
