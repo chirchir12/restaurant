@@ -51,5 +51,5 @@ def register(request):
 
 def logout_user(request,next_page=None):
     logout(request)
-
+    
     return redirect("/")
