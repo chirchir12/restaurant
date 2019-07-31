@@ -1,0 +1,19 @@
+{%load bootstrap4%}
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'snippets/head.html' %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% include 'base/nav.html' %}
+   
+   {% block content %}
+       
+   {% endblock %}
+       
+
+    {% include 'snippets/foot.html' %}
+  </body>
+</html>
