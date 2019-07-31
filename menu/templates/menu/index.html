@@ -3,10 +3,14 @@
 {% block content %}
   <h2>The Nazi Restaurant</h2>
   <img src="" alt="">
+  <section>
+    <header>
+      Validation
+    </header>
+    <p>{{user}}</p>
+  </section>
   <p>local Login <a href="{%url 'login'%}">Here</a>  or Login  <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
     Via Google
   </a></p>
   <a href="{%url 'register'%}">Register</a>
 {% endblock content %}
-  
-    

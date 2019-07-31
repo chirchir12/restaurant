@@ -73,6 +73,9 @@ class UserAdminChangeForm(forms.ModelForm):
         # field does not have access to the initial value
         return self.initial["password"]
 
-
-class LoginForm(forms.ModelForm):
-    
+'''
+Login
+'''
+class LoginForm(forms.Form):
+    email=forms.EmailField(label="Email",required=True)
+    password=forms.CharField(label="Password",required=True, widget=forms.PasswordInput)
