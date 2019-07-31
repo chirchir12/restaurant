@@ -4,7 +4,16 @@
 
 {% block content %}
 <div class="jumbotron jumbotron-fluid">
-  or Login  <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+
+  {%if user.is_authenticated%}
+    <p> <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">Logout</a>
+      {{user}}
+</p>
+{%else%}
+<a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+<a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+<a class="btn btn-primary" href="{% url 'register' %}">Register</a>
+{%endif%}
     <div class="layer">
         <div class="container">
           <h1 class="display-4">Fluid jumbotron</h1>
