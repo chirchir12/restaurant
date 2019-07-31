@@ -1,0 +1,46 @@
+.navbar.navbar-expand-lg.navigationBar{
+    background-color:rgba(239, 108, 0, .6);
+}
+    .navbar-nav a.nav-link{
+        color: #ffffff;
+    }
+    .navbar-nav a.nav-link:hover{
+        color:#c41c00;
+        font-weight: 900;
+    }
+    .navbar-brand{
+        color: #ffffff;
+    }
+    .navbar-brand:hover{
+        color:#c41c00;
+        font-weight: 900;
+        
+    }
+    .btn.search-meal{
+        color: #ffffff;
+        background-color:#bf360c;
+
+    }
+
+    .dropdown-menu{
+        background-color:#ef6c00;
+    }
+    .dropdown-menu .dropdown-item{
+        color: #ffffff;
+    }
+    .dropdown-menu .dropdown-item:hover{
+        background-color: #bf360c;
+        color: #fff;
+        font-weight: 700;
+    }
+.jumbotron{
+    background: url('/static/img/meetup.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 350px;
+   
+    
+}
