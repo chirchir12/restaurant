@@ -9,16 +9,16 @@
 <body>
   <header>
     <h2>The Nazi Restaurant</h2>
-    {% if user.is_authenticated %}
-      <p>Logged as {{ user.username }}</p>
-      <p>{{user.last_name}}</p>
-      <p>{{user.first_name}}</p>
+
       <img src="" alt="">
-     {% else %}
-       <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
-         Login
-       </a>
-     {% endif %}
+
+       <p>local Login <a href="{%url 'login'%}">Here</a>  or Login  <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+        Via Google
+       </a></p>
+
+
+       <a href="{%url 'register'%}">Register</a>
+
   </header>
 </body>
 </html>

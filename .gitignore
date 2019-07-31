@@ -1,7 +1,5 @@
 # Django #
 .vscode
-staticfiles/
-static_cdn/
 *.log
 *.pot
 *.pyc
