@@ -7,10 +7,14 @@
     <header>
       Validation
     </header>
+    {%if user.is_authenticated%}
     <p>{{user}}</p>
+    <a href="{%url 'logout'%}">Logout</a>
+    {%endif%}
   </section>
   <p>local Login <a href="{%url 'login'%}">Here</a>  or Login  <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
     Via Google
   </a></p>
   <a href="{%url 'register'%}">Register</a>
+
 {% endblock content %}

@@ -47,3 +47,9 @@ def register(request):
     else:
         form=RegisterForm()
     return render(request,"registration_form.html",{"title":title,"form":form})
+
+
+def logout_user(request,next_page=None):
+    logout(request)
+
+    return redirect("/")
